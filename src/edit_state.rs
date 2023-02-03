@@ -34,7 +34,12 @@ impl EditState {
             Self::Selected{node, iota} => {
                 if let Some(index) = node_index {
                     if index != *node {
-                        graph.links.push(Link::new(*node, index));
+                        let link = Link::new(*node, index);
+                        if graph.links.contains(&link) {
+                            graph.links.retain(|&l| l != link);
+                        } else {
+                            graph.links.push(link);
+                        }
                     }
                 }
                 Self::None(*iota)

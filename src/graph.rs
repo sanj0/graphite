@@ -11,6 +11,7 @@ pub struct Node {
 }
 
 /// Strores indexes of a and b node
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub struct Link {
     pub a: usize,
     pub b: usize,
@@ -39,7 +40,6 @@ impl Link {
 
 impl Graph {
     pub const NODE_SIZE: f32 = 25.;
-    pub const NODE_OUTLINE_THICKNESS: f32 = 3.;
     pub const NODE_LABEL_FONT_SIZE: f32 = 30.;
     pub const LINK_THICKNESS: f32 = 4.;
 
