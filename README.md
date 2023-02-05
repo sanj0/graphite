@@ -1,5 +1,5 @@
 # Graphite
-Find out visually by creating nodes, links and dragging them around!
+Is my graph planar? Find out visually by creating nodes, links and dragging them around!
 
 ## Build & Run
 Have rust and cargo installed, clone the repo and run `cargo r [--release]`.
